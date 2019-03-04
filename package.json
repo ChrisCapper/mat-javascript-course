@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/ChrisCapper/mat-javascript-course#readme",
   "devDependencies": {
-    "eslint": "^5.15.0"
+    "cucumber": "^5.1.0",
+    "eslint": "^5.15.0",
+    "eslint-plugin-cucumber": "^1.2.0",
+    "eslint-plugin-protractor": "^1.41.1",
+    "protractor": "^5.4.2"
   }
 }
