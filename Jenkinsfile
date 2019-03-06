@@ -6,7 +6,8 @@ pipeline {
     triggers { pollSCM('* * * * *') } //poll the source code repo every minute
 
     stages {
-        stage('install Dependancies') {
+        
+        stage('Install Dependancies') {
             steps {
                 bat "npm install"
             }
@@ -15,7 +16,7 @@ pipeline {
         stage('Start Selenium Server and Run Acceptance Tests') {
             steps {
                 bat "START /B npx webdriver-manager start && npm test"
-            }
+                }
             post {
                 always {
                     publishHTML([
@@ -24,7 +25,7 @@ pipeline {
                         keepAll : false,
                         reportDir : '.tmp/report',
                         reportFiles : 'index.html',
-                        reportName : 'BDD report',
+                        reportName : 'BDD Report',
                         reportTitles : ''])
                 }
             }
