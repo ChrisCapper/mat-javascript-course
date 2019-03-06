@@ -9,7 +9,7 @@ exports.config = {
         options: {
             //read the options part for more options
             automaticallyGenerateReport: true,
-            removeExisitingJsonReportFile: true
+            removeExisitingJsonReportFile: true,
         }
     }],
 
@@ -19,7 +19,7 @@ exports.config = {
     cucumberOpts: {
         require: 'features/step_definitions/*.steps.js',
         tags: false,
-        format: 'json:results.json',
+        format: 'json:.temp/results.json',
         profile: false,
         'no-source': true
     }

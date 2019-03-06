@@ -1,9 +1,15 @@
 /**
-* Page object module for CRUD website
+* Page Object for the 'view product' Page
 * @constructor
 */
-
-var viewProductPage = function() {
-    this.productName = $('#mat-input-0')
+var ViewProductPage = function () {
+    /**
+    * Used to create the locator for the Product element (we don't know what our product name will be)
+    * @param {object} product
+    * @returns {ElementFinder} element
+    */
+    this.productName = function (product) {
+        return element(by.cssContainingText('h2', product.name));
+    }
 };
-module.exports = new viewProductPage();
+module.exports = new ViewProductPage();

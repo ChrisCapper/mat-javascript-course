@@ -7,7 +7,7 @@ var HomePage = function() {
     /**
      * Add product button
      */
-    this.addProduct.$('.mat-flat-button', '.mat-primary');
+    this.addProduct = $('.mat-flat-button', '.mat-primary');
 
     /**
      * Used to create the locator for the Product element (we dont know what our product name will be)
