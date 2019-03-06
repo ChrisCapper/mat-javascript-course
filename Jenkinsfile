@@ -15,7 +15,7 @@ pipeline {
 
         stage('Update Selenium') {
             steps {
-                bat "npx webdriver-manager update"
+                bat "/B npx webdriver-manager update"
             }
         }
 
