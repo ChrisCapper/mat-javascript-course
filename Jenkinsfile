@@ -12,15 +12,10 @@ pipeline {
                 bat "npm install"
             }
         }
-
-        stage('Update Selenium') {
-            steps {
-                bat "START /B npx webdriver-manager update"
-            }
-        }
-
+        
         stage('Start Selenium Server and Run Acceptance Tests') {
             steps {
+                bat "START /B npx webdriver-manager update"
                 bat "START /B npx webdriver-manager start"
                 bat "npm test"
                 }
