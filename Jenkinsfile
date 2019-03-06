@@ -3,7 +3,7 @@ pipeline {
     
     // parameters {}
 
-    triggers { pollSCM('* * * * *') } //poll the source code repo every minute
+    triggers { pollSCM('* * * * * ') } //poll the source code repo every minute
 
     stages {
         
