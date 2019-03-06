@@ -3,7 +3,7 @@ pipeline {
     
     // parameters {}
 
-    triggers { pollSCM('* * * * * ') } //poll the source code repo every minute
+    triggers { pollSCM('* * * * *') } //poll the source code repo every minute
 
     stages {
         
@@ -12,7 +12,7 @@ pipeline {
                 bat "npm install"
             }
         }
-        
+
         stage('Start Selenium Server and Run Acceptance Tests') {
             steps {
                 bat "START /B npx webdriver-manager update"
