@@ -16,7 +16,7 @@ var HomePage = function() {
      */
 
     this.productInTable = function(product){
-        return element(by.cssContainingText('mat-cell', product.name));
+        return element(by.cssContainingText('.mat-cell', product.name));
     }
 };
 

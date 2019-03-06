@@ -20,11 +20,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "test\\features\\step_definitions\\product.steps.js:19"
+              "location": "test\\features\\step_definitions\\product.steps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 5000000
             }
           },
           {
@@ -52,19 +52,21 @@
             "line": 8,
             "name": "a product doesn't exist",
             "match": {
-              "location": "test\\features\\step_definitions\\product.steps.js:23"
+              "location": "test\\features\\step_definitions\\product.steps.js:24"
             },
             "result": {
-              "status": "pending"
+              "status": "failed",
+              "duration": 2253000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -true\n    +false\n"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 13,
-            "name": "i add the product",
+            "name": "I add the product",
             "match": {
-              "location": "test\\features\\step_definitions\\product.steps.js:27"
+              "location": "test\\features\\step_definitions\\product.steps.js:35"
             },
             "result": {
               "status": "skipped"
@@ -76,7 +78,7 @@
             "line": 14,
             "name": "the product is created",
             "match": {
-              "location": "test\\features\\step_definitions\\product.steps.js:31"
+              "location": "test\\features\\step_definitions\\product.steps.js:44"
             },
             "result": {
               "status": "skipped"
@@ -90,7 +92,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 1000000
             }
           }
         ]

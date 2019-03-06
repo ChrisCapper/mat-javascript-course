@@ -9,7 +9,7 @@ exports.config = {
         options: {
             //read the options part for more options
             automaticallyGenerateReport: true,
-            removeExisitingJsonReportFile: true,
+            removeExistingJsonReportFile: true,
         }
     }],
 

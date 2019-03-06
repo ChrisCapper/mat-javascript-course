@@ -10,5 +10,5 @@ Given a product doesn't exist
 | carrots | orange vegetables | 10 |
 
 Scenario: A product is added
-When i add the product
+When I add the product
 Then the product is created
