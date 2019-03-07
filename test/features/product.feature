@@ -7,7 +7,7 @@ Feature: Product Management
 
         Given a product doesn't exist
             | name            | description               | price |
-            | Callway B13     | B is for BOOM!            | 400   |
+            | Callway B19     | B is for BOOM!            | 400   |
 
     Scenario: A product is added
         When I add the product

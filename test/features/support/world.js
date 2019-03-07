@@ -5,7 +5,7 @@
 
 var World = function World() {
     // empty test data for our product
-    this.product = undefined;
+    this.product = {};
     // method to open the browser
     this.openWebsite = function () {
        // bug fix so protractor works with cucumber
