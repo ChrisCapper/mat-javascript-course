@@ -33,6 +33,10 @@ Given('a product doesn\'t exist', function (dataTable) {
 });
 
 When('I add the product', function () {
+
+  // break point
+  debugger;
+  // run 'npm run debug' open 'chrome://inspect/#devices' and click inspect
 actions.click(homePage.addProduct);
 actions.type(addProductPage.productName, this.product.name);
 actions.type(addProductPage.productDescription, this.product.description);
@@ -44,3 +48,4 @@ return actions.click(addProductPage.submitButton);
 Then('the product is created', function () {
   return expect(actions.waitForElement(viewProductPage.productName(this.product))).to.eventually.be.true;
 });
+

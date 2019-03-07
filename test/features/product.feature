@@ -7,12 +7,7 @@ Feature: Product Management
 
         Given a product doesn't exist
             | name            | description               | price |
-            | Callway B12     | B is for BOOM!            | 400   |
-            | Ping WHOA       | Quality                   | 375   |
-            | Ben Ross Tinker | Cheap as chips            | 75    |
-            | Titliest TS2    | Best driver on the market | 450   |
-            | Ping G20        | Solid hitter              | 300   |
-
+            | Callway B13     | B is for BOOM!            | 400   |
 
     Scenario: A product is added
         When I add the product
