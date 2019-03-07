@@ -21,22 +21,19 @@ Before(function () {
   this.openWebsite()
 });
 
-Given('a product doesn\'t exist', function (dataTable) {
+Given('a product with {string} and {string} and {string}', function (name, description, price) {
 
   // convert data from table to array object
-  var data = dataTable.hashes();
-  // assign product with data 0 from array
-  this.product = data[0];
-  // return statement tells cucumber the step has finished
-  return expect(actions.isElementOnPage(homePage.productInTable(this.product))).to.eventually.be.false;
+  this.product.name = name;
+  this.product.description = description;
+  this.product.price = price;
+  
+  // return expect(actions.isElementOnPage(homePage.productInTable(this.product))).to.eventually.be.false;
 
 });
 
 When('I add the product', function () {
 
-  // break point
-  debugger;
-  // run 'npm run debug' open 'chrome://inspect/#devices' and click inspect
 actions.click(homePage.addProduct);
 actions.type(addProductPage.productName, this.product.name);
 actions.type(addProductPage.productDescription, this.product.description);
@@ -45,7 +42,7 @@ actions.type(addProductPage.productPrice, this.product.price);
 return actions.click(addProductPage.submitButton);
 });
 
-Then('the product is created', function () {
+Then('the product is added', function () {
   return expect(actions.waitForElement(viewProductPage.productName(this.product))).to.eventually.be.true;
 });
 
